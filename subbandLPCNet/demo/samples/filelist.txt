@@ -1,0 +1,4 @@
+recording: rec
+subband LPCNet with subband autoregressive model: sbwt
+subband LPCNet without subband autoregressive model: sbwo
+original fullband LPCNet: fb
