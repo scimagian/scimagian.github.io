@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>An Efficient Subband Linear Prediction for LPCNet-based Neural Synthesis</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheet.css"/>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1>An Efficient Subband Linear Prediction for LPCNet-based Neural Synthesis</h1>
+      </header>
+    </article>
+
+    <!-- <div><b>Paper:</b> <a href="https://www.baidu.com">arXiv</a> <a href="http://www.baidu.com">ICASSP 2019</a></div> -->
+    <div><b>Authors:</b> Yang Cui, Xi Wang, Lei He, Frank K. Soong</div>
+    <div><b>Abstract:</b>LPCNet neural vocoder and its variants have shown that it can synthesize high-quality speech in small footprint by exploiting domain knowledge in speech. In this paper, we introduce subband linear prediction in the LPCNet for producing high-fidelity speech at a high efficiency with consideration of subband correlation. Speech is decomposed into multiple subband signals with linear prediction to reduce the complexity of neural vocoder. A novel subband-based autoregressive model is proposed to learn the joint distribution of the subband sequences by introducing a reasonable assumption, which keeps the dependence between subbands while accelerating the inference speed. Based upon the human auditory perception sensitivity to the harmonic speech components in the baseband, we allocate more computational resources to model the low-frequency subband to synthesize natural phase and magnitude of the synthesized speech. Both objective and subjective tests show the proposed subband LPCNet neural vocoder can synthesize natural speech at a rate nearly three times faster than the original fullband one (MOS 4.62 vs. 4.54).</div>
+
+	<div><p></p><font size="3" color="blue">FROM LEFT TO RIGHT: (1) Recording (2) Subband LPCNet with subband AR (3) Subband LPCNet without subband AR (4) Fullband LPCNet</font></div>
+	
+    <div>
+      <h3>Demos<p></p></h3>
+      <table>
+		<tr><td class="transcript">“Meanwhile , the Florida delegation sprang into action .”<p></p></td></tr>
+        <tr><td><audio controls><source src="samples/1_rec.wav"></audio><audio controls><source src="samples/1_sbwt.wav"></audio><audio controls><source src="samples/1_sbwo.wav"></audio><audio controls><source src="samples/1_fb.wav"></audio><p></p></td></tr>
+        <tr><td class="transcript">“I'm trying to balance out all the emo I keep finding lately .”<p></p></td></tr>
+        <tr><td><audio controls><source src="samples/2_rec.wav"></audio><audio controls><source src="samples/2_sbwt.wav"></audio><audio controls><source src="samples/2_sbwo.wav"></audio><audio controls><source src="samples/2_fb.wav"></audio><p></p></td></tr>
+        <tr><td class="transcript">“Lee , forever young and sneering , never got that chance .”<p></p></td></tr>
+        <tr><td><audio controls><source src="samples/3_rec.wav"></audio><audio controls><source src="samples/3_sbwt.wav"></audio><audio controls><source src="samples/3_sbwo.wav"></audio><audio controls><source src="samples/3_fb.wav"></audio><p></p></td></tr>
+        <tr><td class="transcript">“He launched his campaign for the presidency last November .”<p></p></td></tr>
+        <tr><td><audio controls><source src="samples/4_rec.wav"></audio><audio controls><source src="samples/4_sbwt.wav"></audio><audio controls><source src="samples/4_sbwo.wav"></audio><audio controls><source src="samples/4_fb.wav"></audio><p></p></td></tr>
+      </table>
+    </div>
+
+  </body>
+</html>
