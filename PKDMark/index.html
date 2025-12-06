@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Efficient Speech Watermarking for Speech Synthesis via Progressive Knowledge Distillation</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheet.css"/>
+  </head>
+
+  <body>
+    <article>
+      <header>
+        <h1>Efficient Speech Watermarking for Speech Synthesis via Progressive Knowledge Distillation</h1>
+      </header>
+    </article>
+
+    <!-- Paper -->
+    <div>
+      <b>Paper:</b>
+      <a href="https://arxiv.org/abs/2509.19812" target="_blank">arXiv:2509.19812</a>
+    </div>
+
+    <!-- Authors -->
+    <div><b>Authors:</b> Yang Cui, <i>et al.</i></div>
+
+    <!-- Abstract -->
+    <div>
+      <b>Abstract:</b>
+      With the rapid advancement of speech generative models, unauthorized voice cloning poses significant privacy and security risks. 
+      Speech watermarking offers a viable solution for tracing sources and preventing misuse. Current watermarking technologies fall mainly 
+      into two categories: DSP-based methods and deep learning-based methods. DSP-based methods are efficient but vulnerable to attacks, 
+      whereas deep learning-based methods offer robust protection at the expense of significantly higher computational cost. 
+      To improve computational efficiency and enhance robustness, we propose PKDMark, a lightweight deep learning-based speech watermarking 
+      method that leverages progressive knowledge distillation (PKD). Our approach proceeds in two stages: (1) training a high-performance 
+      teacher model using an invertible neural network-based architecture, and (2) transferring the teacher's capabilities to a compact 
+      student model through progressive knowledge distillation. This process reduces computational costs by 93.6% while maintaining 
+      high levels of robustness and imperceptibility. Experimental results demonstrate that our distilled model achieves an average 
+      detection F1 score of 99.6% with a PESQ of 4.30 under advanced distortions, enabling efficient speech watermarking for 
+      real-time speech synthesis applications.
+    </div>
+
+    <div>
+      <p></p>
+      <font size="3" color="blue">
+        FROM LEFT TO RIGHT: (1) Host speech (2) WavMark (3) Watermarked speech by teacher model (4) PKDMark (proposed)
+      </font>
+    </div>
+
+    <!-- Demo Table -->
+    <div>
+      <h3>Demos<p></p></h3>
+      <table>
+
+        <!-- Sample 1 -->
+        <tr><td class="transcript">
+          “Sample sentence 1 for PKDMark demonstration.”<p></p>
+        </td></tr>
+        <tr><td>
+          <audio controls><source src="samples/1_host.wav"></audio>
+          <audio controls><source src="samples/1_wavmark.wav"></audio>
+          <audio controls><source src="samples/1_teacher.wav"></audio>
+          <audio controls><source src="samples/1_pkdmark.wav"></audio>
+          <p></p>
+        </td></tr>
+
+      </table>
+    </div>
+
+  </body>
+</html>
