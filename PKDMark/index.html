@@ -15,7 +15,13 @@
     <!-- Paper -->
     <div>
       <b>Paper:</b>
-      <a href="https://arxiv.org/abs/2509.19812" target="_blank">PDF</a>
+      <a href="https://arxiv.org/abs/2509.19812" target="_blank">Download Paper (PDF)</a>
+    </div>
+
+    <!-- Poster -->
+    <div>
+      <b>Poster:</b>
+      <a href="conference/poster.pdf" target="_blank">Download Poster (PDF)</a>
     </div>
 
     <!-- Authors with Google Scholar links -->
@@ -24,29 +30,29 @@
       <a href="https://scholar.google.com/citations?user=n0eSvvkAAAAJ" target="_blank">Yang Cui</a>,
       <span>Peter Pan</span>,
       <a href="https://scholar.google.com/citations?user=EKl9yY8AAAAJ" target="_blank">Lei He</a>,
-      <a href="https://scholar.google.com/citations?user=689bIIwAAAAJ" target="_blank">Sheng Zhao</a>
+      <a href="https://scholar.google.com/citations?user=689bIIwAAAAJ" target="_blank">Sheng Zhao</a>,
     </div>
 
     <!-- Abstract -->
     <div>
       <b>Abstract:</b>
-      With the rapid advancement of speech generative models, unauthorized voice cloning poses significant privacy and security risks. 
-      Speech watermarking offers a viable solution for tracing sources and preventing misuse. Current watermarking technologies fall mainly 
-      into two categories: DSP-based methods and deep learning-based methods. DSP-based methods are efficient but vulnerable to attacks, 
-      whereas deep learning-based methods offer robust protection at the expense of significantly higher computational cost. 
-      To improve computational efficiency and enhance robustness, we propose PKDMark, a lightweight deep learning-based speech watermarking 
-      method that leverages progressive knowledge distillation (PKD). Our approach proceeds in two stages: (1) training a high-performance 
-      teacher model using an invertible neural network-based architecture, and (2) transferring the teacher's capabilities to a compact 
-      student model through progressive knowledge distillation. This process reduces computational costs by 93.6% while maintaining 
-      high levels of robustness and imperceptibility. Experimental results demonstrate that our distilled model achieves an average 
-      detection F1 score of 99.6% with a PESQ of 4.30 under advanced distortions, enabling efficient speech watermarking for 
+      With the rapid advancement of speech generative models, unauthorized voice cloning poses significant privacy and security risks.
+      Speech watermarking offers a viable solution for tracing sources and preventing misuse. Current watermarking technologies fall mainly
+      into two categories: DSP-based methods and deep learning-based methods. DSP-based methods are efficient but vulnerable to attacks,
+      whereas deep learning-based methods offer robust protection at the expense of significantly higher computational cost.
+      To improve computational efficiency and enhance robustness, we propose PKDMark, a lightweight deep learning-based speech watermarking
+      method that leverages progressive knowledge distillation (PKD). Our approach proceeds in two stages: (1) training a high-performance
+      teacher model using an invertible neural network-based architecture, and (2) transferring the teacher's capabilities to a compact
+      student model through progressive knowledge distillation. This process reduces computational costs by 93.6% while maintaining
+      high levels of robustness and imperceptibility. Experimental results demonstrate that our distilled model achieves an average
+      detection F1 score of 99.6% with a PESQ of 4.30 under advanced distortions, enabling efficient speech watermarking for
       real-time speech synthesis applications.
     </div>
 
     <div>
       <p></p>
       <font size="3" color="blue">
-        FROM LEFT TO RIGHT: (1) Host speech (2) WavMark (3) Teacher model (4) PKDMark (proposed)
+        FROM LEFT TO RIGHT: (1) Host speech (2) WavMark (3) Watermarked speech by teacher model (4) PKDMark (proposed)
       </font>
     </div>
 
@@ -64,6 +70,42 @@
           <audio controls><source src="samples/1_wavmark.wav"></audio>
           <audio controls><source src="samples/1_teacher.wav"></audio>
           <audio controls><source src="samples/1_pkdmark.wav"></audio>
+          <p></p>
+        </td></tr>
+
+        <!-- Sample 2 -->
+        <tr><td class="transcript">
+          “Sample sentence 2 for PKDMark demonstration.”<p></p>
+        </td></tr>
+        <tr><td>
+          <audio controls><source src="samples/2_host.wav"></audio>
+          <audio controls><source src="samples/2_wavmark.wav"></audio>
+          <audio controls><source src="samples/2_teacher.wav"></audio>
+          <audio controls><source src="samples/2_pkdmark.wav"></audio>
+          <p></p>
+        </td></tr>
+
+        <!-- Sample 3 -->
+        <tr><td class="transcript">
+          “Sample sentence 3 for PKDMark demonstration.”<p></p>
+        </td></tr>
+        <tr><td>
+          <audio controls><source src="samples/3_host.wav"></audio>
+          <audio controls><source src="samples/3_wavmark.wav"></audio>
+          <audio controls><source src="samples/3_teacher.wav"></audio>
+          <audio controls><source src="samples/3_pkdmark.wav"></audio>
+          <p></p>
+        </td></tr>
+
+        <!-- Sample 4 -->
+        <tr><td class="transcript">
+          “Sample sentence 4 for PKDMark demonstration.”<p></p>
+        </td></tr>
+        <tr><td>
+          <audio controls><source src="samples/4_host.wav"></audio>
+          <audio controls><source src="samples/4_wavmark.wav"></audio>
+          <audio controls><source src="samples/4_teacher.wav"></audio>
+          <audio controls><source src="samples/4_pkdmark.wav"></audio>
           <p></p>
         </td></tr>
 
