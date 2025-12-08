@@ -1,116 +1,125 @@
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Efficient Speech Watermarking for Speech Synthesis via Progressive Knowledge Distillation</title>
-    <link rel="stylesheet" type="text/css" href="./stylesheet.css"/>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PKDMark: Efficient Speech Watermarking via Progressive Knowledge Distillation</title>
 
-  <body>
-    <article>
-      <header>
-        <h1>Efficient Speech Watermarking for Speech Synthesis via Progressive Knowledge Distillation</h1>
-      </header>
-    </article>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Paper -->
-    <div>
-      <b>Paper:</b>
-      <a href="https://arxiv.org/abs/2509.19812" target="_blank">Download Paper (PDF)</a>
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Medium Zoom -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/medium-zoom/dist/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script>
+
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .container { max-width: 1400px !important; }
+    .title-icon { width: 50px; height: 50px; margin-right: 15px; }
+    .author-name { font-size: 18px; margin-right: 10px; }
+    .author-name a { text-decoration: none; }
+    .audio-card { background: #f8f9fa; border: 1px solid #ddd; border-radius: 10px; padding: 20px; }
+    .audio-sample-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .audio-item { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; }
+    .audio-item h6 { font-size: 15px; color: #666; margin-bottom: 8px; }
+  </style>
+</head>
+
+<body>
+<br>
+<center>
+  <div class="container">
+    <h1 style="font-size: 36px; margin-bottom: 20px;">
+      <span style="font-style: italic; font-weight: 600;">Efficient Speech Watermarking for Speech Synthesis via Progressive Knowledge Distillation
+    </h1>
+
+    <div class="authors-list text-center mb-2">
+      <span class="author-name"><a href="https://scholar.google.com/citations?user=n0eSvvkAAAAJ">Yang Cui</a></span>
+      <span class="author-name">Peter Pan</span>
+      <span class="author-name"><a href="https://scholar.google.com/citations?user=EKl9yY8AAAAJ">Lei He</a></span>
+      <span class="author-name"><a href="https://scholar.google.com/citations?user=689bIIwAAAAJ">Sheng Zhao</a></span>
     </div>
 
-    <!-- Poster -->
-    <div>
-      <b>Poster:</b>
-      <a href="conference/poster.pdf" target="_blank">Download Poster (PDF)</a>
+    <div class="d-flex justify-content-center gap-3 mb-4 mt-3">
+      <a href="conference/poster.pdf" class="btn btn-light"><i class="fas fa-image me-2"></i>Poster</a>
+      <a href="https://arxiv.org/abs/2509.19812" class="btn btn-light"><i class="fas fa-file-pdf me-2"></i>PDF</a>
+    </div>
+  </div>
+</center>
+
+<div class="container mt-4">
+
+  <!-- Abstract -->
+  <div style="max-width: 800px; margin: 40px auto; text-align: justify;">
+
+  <h2 style="text-align: center; margin-bottom: 20px;">Abstract</h2>
+
+  <p style="text-align: justify; text-align-last: left; font-size: 18px; line-height: 1.65;">
+  With the rapid advancement of speech generative models, unauthorized voice cloning poses significant privacy and security risks. Speech watermarking offers a viable solution for tracing sources and preventing misuse. Current watermarking technologies fall mainly into two categories: DSP-based methods and deep learning-based methods. DSP-based methods are efficient but vulnerable to attacks, whereas deep learning-based methods offer robust protection at the expense of significantly higher computational cost. To improve computational efficiency and enhance robustness, we propose PKDMark, a lightweight deep learning-based speech watermarking method that leverages progressive knowledge distillation (PKD). Our approach proceeds in two stages: (1) training a high-performance teacher model using an invertible neural network-based architecture, and (2) transferring the teacher's capabilities to a compact student model through progressive knowledge distillation. This process reduces computational costs by 93.6% while maintaining high levels of robustness and imperceptibility. Experimental results demonstrate that our distilled model achieves an average detection F1 score of 99.6% with a PESQ of 4.30 under advanced distortions, enabling efficient speech watermarking for real-time speech synthesis applications. </p>
+</div>
+
+  <div class="text-center">
+    <video controls style="width: 90%; max-width: 800px; border-radius: 8px;">
+      <source src="conference/efficientwatermarksmallvedio.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Demo Audio -->
+  <h2 style="text-align: center;">Demonstrations</h2>
+  <p>Each sample includes: Host speech, WavMark baseline, Teacher watermark, and PKDMark (ours).</p>
+
+  <div class="audio-sample-grid mt-4">
+
+    <!-- Sample 1 -->
+    <div class="audio-card">
+      <h5>Sample 1</h5>
+      <p>“Sample sentence 1 for PKDMark demonstration.”</p>
+      <div class="audio-item"><h6>Host</h6><audio controls><source src="samples/1_host.wav"></audio></div>
+      <div class="audio-item"><h6>WavMark</h6><audio controls><source src="samples/1_wavmark.wav"></audio></div>
+      <div class="audio-item"><h6>Teacher</h6><audio controls><source src="samples/1_teacher.wav"></audio></div>
+      <div class="audio-item"><h6>PKDMark</h6><audio controls><source src="samples/1_pkdmark.wav"></audio></div>
     </div>
 
-    <!-- Authors with Google Scholar links -->
-    <div>
-      <b>Authors:</b>
-      <a href="https://scholar.google.com/citations?user=n0eSvvkAAAAJ" target="_blank">Yang Cui</a>,
-      <span>Peter Pan</span>,
-      <a href="https://scholar.google.com/citations?user=EKl9yY8AAAAJ" target="_blank">Lei He</a>,
-      <a href="https://scholar.google.com/citations?user=689bIIwAAAAJ" target="_blank">Sheng Zhao</a>,
+    <!-- Sample 2 -->
+    <div class="audio-card">
+      <h5>Sample 2</h5>
+      <p>“Sample sentence 2 for PKDMark demonstration.”</p>
+      <div class="audio-item"><h6>Host</h6><audio controls><source src="samples/2_host.wav"></audio></div>
+      <div class="audio-item"><h6>WavMark</h6><audio controls><source src="samples/2_wavmark.wav"></audio></div>
+      <div class="audio-item"><h6>Teacher</h6><audio controls><source src="samples/2_teacher.wav"></audio></div>
+      <div class="audio-item"><h6>PKDMark</h6><audio controls><source src="samples/2_pkdmark.wav"></audio></div>
     </div>
 
-    <!-- Abstract -->
-    <div>
-      <b>Abstract:</b>
-      With the rapid advancement of speech generative models, unauthorized voice cloning poses significant privacy and security risks.
-      Speech watermarking offers a viable solution for tracing sources and preventing misuse. Current watermarking technologies fall mainly
-      into two categories: DSP-based methods and deep learning-based methods. DSP-based methods are efficient but vulnerable to attacks,
-      whereas deep learning-based methods offer robust protection at the expense of significantly higher computational cost.
-      To improve computational efficiency and enhance robustness, we propose PKDMark, a lightweight deep learning-based speech watermarking
-      method that leverages progressive knowledge distillation (PKD). Our approach proceeds in two stages: (1) training a high-performance
-      teacher model using an invertible neural network-based architecture, and (2) transferring the teacher's capabilities to a compact
-      student model through progressive knowledge distillation. This process reduces computational costs by 93.6% while maintaining
-      high levels of robustness and imperceptibility. Experimental results demonstrate that our distilled model achieves an average
-      detection F1 score of 99.6% with a PESQ of 4.30 under advanced distortions, enabling efficient speech watermarking for
-      real-time speech synthesis applications.
+    <!-- Sample 3 -->
+    <div class="audio-card">
+      <h5>Sample 3</h5>
+      <p>“Sample sentence 3 for PKDMark demonstration.”</p>
+      <div class="audio-item"><h6>Host</h6><audio controls><source src="samples/3_host.wav"></audio></div>
+      <div class="audio-item"><h6>WavMark</h6><audio controls><source src="samples/3_wavmark.wav"></audio></div>
+      <div class="audio-item"><h6>Teacher</h6><audio controls><source src="samples/3_teacher.wav"></audio></div>
+      <div class="audio-item"><h6>PKDMark</h6><audio controls><source src="samples/3_pkdmark.wav"></audio></div>
     </div>
 
-    <div>
-      <p></p>
-      <font size="3" color="blue">
-        FROM LEFT TO RIGHT: (1) Host speech (2) WavMark (3) Watermarked speech by teacher model (4) PKDMark (proposed)
-      </font>
+    <!-- Sample 4 -->
+    <div class="audio-card">
+      <h5>Sample 4</h5>
+      <p>“Sample sentence 4 for PKDMark demonstration.”</p>
+      <div class="audio-item"><h6>Host</h6><audio controls><source src="samples/4_host.wav"></audio></div>
+      <div class="audio-item"><h6>WavMark</h6><audio controls><source src="samples/4_wavmark.wav"></audio></div>
+      <div class="audio-item"><h6>Teacher</h6><audio controls><source src="samples/4_teacher.wav"></audio></div>
+      <div class="audio-item"><h6>PKDMark</h6><audio controls><source src="samples/4_pkdmark.wav"></audio></div>
     </div>
 
-    <!-- Demo Table -->
-    <div>
-      <h3>Demos<p></p></h3>
-      <table>
+  </div>
 
-        <!-- Sample 1 -->
-        <tr><td class="transcript">
-          “Sample sentence 1 for PKDMark demonstration.”<p></p>
-        </td></tr>
-        <tr><td>
-          <audio controls><source src="samples/1_host.wav"></audio>
-          <audio controls><source src="samples/1_wavmark.wav"></audio>
-          <audio controls><source src="samples/1_teacher.wav"></audio>
-          <audio controls><source src="samples/1_pkdmark.wav"></audio>
-          <p></p>
-        </td></tr>
+</div>
 
-        <!-- Sample 2 -->
-        <tr><td class="transcript">
-          “Sample sentence 2 for PKDMark demonstration.”<p></p>
-        </td></tr>
-        <tr><td>
-          <audio controls><source src="samples/2_host.wav"></audio>
-          <audio controls><source src="samples/2_wavmark.wav"></audio>
-          <audio controls><source src="samples/2_teacher.wav"></audio>
-          <audio controls><source src="samples/2_pkdmark.wav"></audio>
-          <p></p>
-        </td></tr>
+<script>
+  mediumZoom('img', { margin: 24, background: 'rgba(0,0,0,0.9)' });
+</script>
 
-        <!-- Sample 3 -->
-        <tr><td class="transcript">
-          “Sample sentence 3 for PKDMark demonstration.”<p></p>
-        </td></tr>
-        <tr><td>
-          <audio controls><source src="samples/3_host.wav"></audio>
-          <audio controls><source src="samples/3_wavmark.wav"></audio>
-          <audio controls><source src="samples/3_teacher.wav"></audio>
-          <audio controls><source src="samples/3_pkdmark.wav"></audio>
-          <p></p>
-        </td></tr>
-
-        <!-- Sample 4 -->
-        <tr><td class="transcript">
-          “Sample sentence 4 for PKDMark demonstration.”<p></p>
-        </td></tr>
-        <tr><td>
-          <audio controls><source src="samples/4_host.wav"></audio>
-          <audio controls><source src="samples/4_wavmark.wav"></audio>
-          <audio controls><source src="samples/4_teacher.wav"></audio>
-          <audio controls><source src="samples/4_pkdmark.wav"></audio>
-          <p></p>
-        </td></tr>
-
-      </table>
-    </div>
-
-  </body>
+</body>
 </html>
